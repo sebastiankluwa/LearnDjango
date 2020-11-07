@@ -8,7 +8,7 @@
         <h3>Znaleziono {{ total_results }} wynik{{ total_results|pluralize:"i" }}</h3>
         {% for result in results %}
             {% with post=result.object %}
-                <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                <h4><a href="{{ result.get_absolute_url }}">{{ result.title }}</a></h4>
                 {{ post.body|truncatewords:5 }}
             {% endwith %}
         {% empty %}
